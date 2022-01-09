@@ -1,0 +1,17 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html,
+body {
+  font-family: 'patron';
+}
+
+@font-face {
+  font-family: 'patron';
+  src: url('/fonts/patron.otf');
+}

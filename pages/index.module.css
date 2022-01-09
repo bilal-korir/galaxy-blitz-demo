@@ -1,0 +1,11 @@
+.background-image {
+  background-image: url('/loading-background.jpg');
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: color;
+  background-position: center center;
+}
+
+.shadow {
+  filter: drop-shadow(2px 2px 10px #fff);
+}
