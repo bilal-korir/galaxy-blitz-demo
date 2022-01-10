@@ -109,7 +109,7 @@ export default function Home() {
 
         <div className=" flex flex-col justify-center items-center space-y-2">
           <div className="py-5 px-2 rounded-full bottom-10 border-2 cursor-pointer">
-            <div className="-my-3 py-1 px-0.5 rounded-full bg-white animate-bounce"></div>
+            <div className="-my-3 py-1.5 px-0.5 rounded-full bg-white animate-bounce"></div>
           </div>
 
           <div>
@@ -122,11 +122,26 @@ export default function Home() {
         <div className="relative">
           <img src={'images/right-dashed-corner.svg'} />
           <div className="absolute right-5 bottom-10 flex justify-between w-60">
-            <img src={'icons/discord.svg'} />
-            <img src={'icons/telegram.svg'} />
-            <img src={'icons/youtube.svg'} />
-            <img src={'icons/medium.svg'} />
-            <img src={'icons/twitter.svg'} />
+            <img
+              src={'icons/discord.svg'}
+              className="transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer"
+            />
+            <img
+              src={'icons/telegram.svg'}
+              className="transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer"
+            />
+            <img
+              src={'icons/youtube.svg'}
+              className="transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer"
+            />
+            <img
+              src={'icons/medium.svg'}
+              className="transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer"
+            />
+            <img
+              src={'icons/twitter.svg'}
+              className="transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer"
+            />
           </div>
         </div>
       </footer>
