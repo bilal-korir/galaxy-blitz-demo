@@ -1,10 +1,21 @@
 import 'tailwindcss/tailwind.css'
 
-import Head from 'next/head'
+import {
+  useEffect,
+  useLayoutEffect,
+  useState,
+} from 'react'
 
+import Head from 'next/head'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+
+import ProgressBar from '@ramonak/react-progress-bar'
+
+import log from '../utility/log'
 import styles from './index.module.css'
 
-export default function Loading() {
+export default function Home() {
   return (
     <div className={`h-screen flex justify-center items-center `}>
       <Head>
@@ -12,12 +23,9 @@ export default function Loading() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <p
-          className={`text-3xl text-white drop-shadow-3xl ${styles['shadow']}`}
-        >
-          Loading
-        </p>
-      </div>
+      <p className={`text-1xl text-black drop-shadow-3xl ${styles['shadow']}`}>
+        Loading
+      </p>
     </div>
   )
 }
