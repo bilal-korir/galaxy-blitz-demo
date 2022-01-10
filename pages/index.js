@@ -48,9 +48,9 @@ export default function Loading() {
       </Head>
 
       <div className="w-50">
-        <img src="images/logo.svg" className="mx-auto" />
+        <img src="images/logo.svg" className="mx-auto" width={100} />
         <h
-          className={`text-4xl text-center mb-2 text-white ${styles['shadow']} font-patron uppercase`}
+          className={`text-2xl text-center mb-2 text-white ${styles['shadow']} font-patron uppercase`}
         >
           Loading
         </h>

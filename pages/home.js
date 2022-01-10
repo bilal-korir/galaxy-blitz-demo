@@ -21,7 +21,8 @@ import log from '../utility/log'
 import styles from './index.module.css'
 
 export default function Home() {
-  const navbar = useRef(null)
+  const logo = useRef(null)
+  const menu = useRef(null)
   const heroMessage = useRef(null)
   const pageSectionsList = useRef(null)
   const footer = useRef(null)
@@ -32,36 +33,31 @@ export default function Home() {
     async function activateScrollRevealAnimation() {
       ScrollReveal = (await import('scrollreveal')).default
 
-      ScrollReveal().reveal(navbar.current, {
+      ScrollReveal().reveal(logo.current, {
         delay: 1900,
-        distance: '100%',
+        distance: '80%',
         origin: 'top',
-        opacity: 0,
-        // duration: 3000,
         easing: 'ease-in-out',
       })
 
-      // ScrollReveal().reveal(heroMessage.current, {
-      //   delay: 1000,
-      //   distance: '100%',
-      //   origin: 'left',
-      //   opacity: 0,
-      //   duration: 3000,
-      //   easing: 'ease-out',
-      // })
+      ScrollReveal().reveal(menu.current, {
+        delay: 2200,
+        distance: '80%',
+        origin: 'top',
+        easing: 'ease-in-out',
+      })
 
       ScrollReveal().reveal(pageSectionsList.current, {
         delay: 2800,
-        distance: '100%',
+        distance: '80%',
         origin: 'right',
         opacity: 0,
-        // duration: 3000,
         easing: 'ease-in-out',
       })
 
       ScrollReveal().reveal(footer.current, {
         delay: 2800,
-        distance: '100%',
+        distance: '80%',
         origin: 'bottom',
         opacity: 0,
         // duration: 3000,
@@ -73,19 +69,22 @@ export default function Home() {
   }, [])
 
   return (
-    <section
-      className={`h-screen relative py-10  ${styles['home-background-image']}`}
+    <div
+      className={`w-screen h-screen overflow-x-hidden	 ${styles['home-background-image']}`}
     >
       <Head>
         <title>Home - Galaxy Blitz</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="fixed w-full" ref={navbar}>
-        <div className="flex flex-row justify-between px-12">
-          <NavBarLogo />
-
-          <Menu />
+      <div className="fixed w-full">
+        <div className="flex flex-row justify-between items-center pl-0 pr-5 pt-5 lg:pt-10 lg:pl-3 lg:pr-8">
+          <div className="" ref={logo}>
+            <NavBarLogo />
+          </div>
+          <div className="" ref={menu}>
+            <Menu />
+          </div>
         </div>
       </div>
 
@@ -145,6 +144,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </section>
+    </div>
   )
 }
