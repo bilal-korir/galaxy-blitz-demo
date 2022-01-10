@@ -21,16 +21,51 @@ import log from '../utility/log'
 import styles from './index.module.css'
 
 export default function Home() {
-  const paragraph = useRef(null)
+  const navbar = useRef(null)
+  const heroMessage = useRef(null)
+  const pageSectionsList = useRef(null)
+  const footer = useRef(null)
+
   let ScrollReveal
 
   useEffect(() => {
     async function activateScrollRevealAnimation() {
       ScrollReveal = (await import('scrollreveal')).default
 
-      ScrollReveal().reveal(paragraph.current, {
-        delay: 2000,
-        reset: false,
+      ScrollReveal().reveal(navbar.current, {
+        delay: 1000,
+        distance: '100%',
+        origin: 'top',
+        opacity: 0,
+        duration: 3000,
+        easing: 'ease',
+      })
+
+      // ScrollReveal().reveal(heroMessage.current, {
+      //   delay: 500,
+      //   distance: '100%',
+      //   origin: 'left',
+      //   opacity: 0,
+      //   duration: 3000,
+      //   easing: 'ease',
+      // })
+
+      ScrollReveal().reveal(pageSectionsList.current, {
+        delay: 1000,
+        distance: '100%',
+        origin: 'right',
+        opacity: 0,
+        duration: 3000,
+        easing: 'ease',
+      })
+
+      ScrollReveal().reveal(footer.current, {
+        delay: 1000,
+        distance: '100%',
+        origin: 'bottom',
+        opacity: 0,
+        duration: 3000,
+        easing: 'ease',
       })
     }
 
@@ -46,7 +81,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="fixed w-full">
+      <div className="fixed w-full" ref={navbar}>
         <div className="flex flex-row justify-between px-12">
           <NavBarLogo />
           <Menu />
@@ -54,18 +89,26 @@ export default function Home() {
       </div>
 
       <div className="h-full flex flex-row justify-between item-center px-12">
-        <HeroMessage />
-        <PageSectionsList />
+        <div ref={heroMessage} className="w-fit flex item-center">
+          <HeroMessage />
+        </div>
+
+        <div ref={pageSectionsList} className="w-fit flex item-center">
+          <PageSectionsList />
+        </div>
       </div>
 
-      <footer className="absolute bottom-0 w-full flex flex-row justify-between item-center px-12 h-24">
+      <footer
+        ref={footer}
+        className="absolute bottom-0 w-full flex flex-row justify-between item-center px-12 h-24"
+      >
         <div className="">
           <img src={'images/left-dashed-corner.svg'} />
         </div>
 
         <div className=" flex flex-col justify-center items-center space-y-2">
-          <div className="py-5 px-2 rounded-full bottom-10 border-2">
-            <div className="-my-3 py-1 px-0.5 rounded-full bg-white"></div>
+          <div className="py-5 px-2 rounded-full bottom-10 border-2 cursor-pointer">
+            <div className="-my-3 py-1 px-0.5 rounded-full bg-white animate-bounce"></div>
           </div>
 
           <div>
