@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        patron: ['patron', 'regular'],
+        patron: ['Patron'],
       },
     },
   },

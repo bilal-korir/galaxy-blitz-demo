@@ -8,20 +8,22 @@ import {
 import Head from 'next/head'
 import Link from 'next/link'
 
+import ProgressBar from '@ramonak/react-progress-bar'
+
 import styles from './index.module.css'
 
 export default function Loading() {
-  const [p, setP] = useState(0)
+  const [progress, setProgress] = useState(0)
 
-  function progress() {
-    const t = setInterval(() => {
-      setP((pre) => pre + 1)
-      if (p === 100) clearInterval(t)
+  function updateProgressBar() {
+    const interval = setInterval(() => {
+      setProgress((prev) => prev + 1)
+      if (progress === 100) clearInterval(interval)
     }, 100)
   }
 
   useEffect(() => {
-    progress()
+    updateProgressBar()
   }, [])
   return (
     <div
@@ -32,22 +34,24 @@ export default function Loading() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="w-50/100 space-y-3 ">
+      <div className="w-50">
         <img src="logo.svg" className="mx-auto" />
         <p
-          className={`text-3xl text-center text-white drop-shadow-3xl ${styles['shadow']}`}
+          className={`text-4xl text-center mb-2 text-white ${styles['shadow']}`}
         >
           Loading
         </p>
 
-        <div className="mx-auto h-2 rounded-lg">
-          <progress
-            id="file"
-            max="100"
-            value={p}
-            className="bg-black"
-          ></progress>
-        </div>
+        <ProgressBar
+          completed={progress}
+          maxCompleted={100}
+          isLabelVisible={false}
+          baseBgColor="#0D2B46"
+          bgColor="#2595CC"
+          height={3}
+          borderRadius={100}
+          transitionTimingFunction="ease-in"
+        />
       </div>
     </div>
   )

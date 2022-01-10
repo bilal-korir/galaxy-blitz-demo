@@ -5,13 +5,22 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import url('/fonts/patron.otf');
 
 html,
 body {
-  font-family: 'patron';
+  font-family: Patron;
 }
 
+/* p {
+  font-family: Patron;
+} */
+
 @font-face {
-  font-family: 'patron';
-  src: url('/fonts/patron.otf');
+  font-family: Patron;
+  src: url('/fonts/patron.otf') format('opentype');
+}
+
+progress:not([value]) {
+  background-color: red;
 }
