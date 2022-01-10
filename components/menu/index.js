@@ -1,9 +1,10 @@
 import styles from './index.module.css'
 
-export default function Menu({ progress }) {
+export default function Menu() {
   return (
-    <div className="py-2 bg-black">
-      <p className="text-white">Menu</p>
+    <div className="flex items-center">
+      <p className="text-2xl text-white uppercase mr-5">Menu</p>
+      <img src="icons/menu-icon.svg" />
     </div>
   )
 }

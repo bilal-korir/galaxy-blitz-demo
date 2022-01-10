@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         patron: ['Patron'],
       },
+      colors: {
+        blue: '#2595cc',
+      },
     },
   },
   plugins: [],

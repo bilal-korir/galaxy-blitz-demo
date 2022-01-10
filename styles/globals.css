@@ -21,6 +21,6 @@ body {
   src: url('/fonts/patron.otf') format('opentype');
 }
 
-progress:not([value]) {
-  background-color: red;
+.shadow {
+  filter: drop-shadow(0px 0px 7px #fff);
 }

@@ -36,8 +36,8 @@ export default function Home() {
   }, [])
 
   return (
-    <div
-      className={`h-screen relative py-10 px-20 ${styles['home-background-image']}`}
+    <section
+      className={`h-screen relative py-10  ${styles['home-background-image']}`}
     >
       <Head>
         <title>Home - Galaxy Blitz</title>
@@ -45,11 +45,11 @@ export default function Home() {
       </Head>
 
       <div className="fixed w-full">
-        <div className="flex flex-row justify-between bg-amber-700">
+        <div className="flex flex-row justify-between px-12">
           <NavBarLogo />
           <Menu />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
