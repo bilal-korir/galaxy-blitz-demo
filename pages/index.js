@@ -40,7 +40,7 @@ export default function Loading() {
 
   return (
     <div
-      className={`h-screen flex justify-center items-center ${styles['background-image']}`}
+      className={`h-screen flex justify-center items-center ${styles['loading-background-image']}`}
     >
       <Head>
         <title>Loading - Galaxy Blitz</title>
@@ -48,7 +48,7 @@ export default function Loading() {
       </Head>
 
       <div className="w-50">
-        <img src="logo.svg" className="mx-auto" />
+        <img src="icons/logo.svg" className="mx-auto" />
         <p
           className={`text-4xl text-center mb-2 text-white ${styles['shadow']}`}
         >
