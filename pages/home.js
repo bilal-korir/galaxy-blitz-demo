@@ -60,7 +60,6 @@ export default function Home() {
         distance: '80%',
         origin: 'bottom',
         opacity: 0,
-        // duration: 3000,
         easing: 'ease-in-out',
       })
     }
@@ -88,12 +87,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-full flex flex-row justify-between item-center px-12">
+      <div className="h-full flex flex-row justify-between item-center px-3 pr-5 lg:pr-8">
         <div ref={heroMessage} className="w-fit flex item-center">
           <HeroMessage />
         </div>
 
-        <div ref={pageSectionsList} className="w-fit flex item-center">
+        <div ref={pageSectionsList} className="flex item-center hidden lg:flex">
           <PageSectionsList />
         </div>
       </div>
