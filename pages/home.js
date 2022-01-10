@@ -99,10 +99,10 @@ export default function Home() {
 
       <footer
         ref={footer}
-        className="absolute bottom-0 w-full flex flex-row justify-between item-center px-12 h-24"
+        className="absolute bottom-0 w-full flex flex-row justify-center lg:justify-between item-center px-12 h-24"
       >
-        <div className="">
-          <img src={'images/left-dashed-corner.svg'} />
+        <div className="hidden lg:flex">
+          <img src={'images/left-dashed-corner.svg'} width={300} />
         </div>
 
         <div className=" flex flex-col justify-center items-center space-y-2">
@@ -111,33 +111,38 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="text-white uppercase font-patron">
+            <p className="text-white font-thin text-xs lg:text-sm uppercase font-patron">
               Start the experience
             </p>
           </div>
         </div>
 
-        <div className="relative">
-          <img src={'images/right-dashed-corner.svg'} />
-          <div className="absolute right-5 bottom-10 flex justify-between w-60">
+        <div className="relative hidden lg:flex">
+          <img src={'images/right-dashed-corner.svg'} width={300} />
+          <div className="absolute right-5 bottom-8 flex justify-between w-48">
             <img
               src={'icons/discord.svg'}
+              width={20}
               className="transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer"
             />
             <img
               src={'icons/telegram.svg'}
+              width={20}
               className="transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer"
             />
             <img
               src={'icons/youtube.svg'}
+              width={20}
               className="transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer"
             />
             <img
               src={'icons/medium.svg'}
+              width={20}
               className="transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer"
             />
             <img
               src={'icons/twitter.svg'}
+              width={20}
               className="transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer"
             />
           </div>

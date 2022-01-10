@@ -24,7 +24,7 @@ export default function HeroMessage({ progress }) {
           A <span className="text-blue	font-patron">mobile first</span>
         </h>
         <h
-          className={`hidden lg:block ${styles['wipe-effect']} text-4xl text-white uppercase font-patron`}
+          className={`hidden lg:block ${styles['wipe-effect']} text-3xl text-white uppercase font-patron`}
         >
           Play-to-earn strategy game
         </h>
@@ -32,7 +32,7 @@ export default function HeroMessage({ progress }) {
         <p
           className={`hidden lg:block ${lineThree ? 'visible' : 'invisible'} ${
             styles[lineThree]
-          } text-2xl text-white tracking-wid font-thin`}
+          } text-lg text-white tracking-wid font-thin`}
         >
           Join in to lead the descendants of humanity and forge a new empire!
         </p>

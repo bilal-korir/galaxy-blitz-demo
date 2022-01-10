@@ -2,7 +2,7 @@ import styles from './index.module.css'
 
 export default function NavBarLogo({ progress }) {
   return (
-    <div className="flex items-center text-white text-right	text-lg font-light uppercase font-patron">
+    <div className="flex items-center text-white text-right	text-md font-light uppercase font-patron">
       <div className="space-y-3">
         <div className="flex justify-end items-center space-x-3 transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer">
           <p className="mb-0 text-blue">Gameplay</p>
