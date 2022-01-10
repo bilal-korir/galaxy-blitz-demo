@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        patron: ['Patron'],
+        patron: ['PATRON'],
       },
       colors: {
         blue: '#2595cc',

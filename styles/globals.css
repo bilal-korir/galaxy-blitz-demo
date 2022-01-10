@@ -5,11 +5,12 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
 @import url('/fonts/patron.otf');
 
 html,
 body {
-  font-family: Patron;
+  font-family: PATRON;
 }
 
 /* p {
@@ -17,8 +18,8 @@ body {
 } */
 
 @font-face {
-  font-family: Patron;
-  src: url('/fonts/patron.otf') format('opentype');
+  font-family: PATRON;
+  src: url('../public/fonts/patron.otf') format('opentype');
 }
 
 .shadow {

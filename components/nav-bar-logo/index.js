@@ -5,7 +5,9 @@ export default function NavBarLogo({ progress }) {
     <div className="flex items-center">
       <img src="images/logo.svg" width={85} />
 
-      <p className={`text-2xl text-white uppercase ${styles['shadow']}`}>
+      <p
+        className={`text-2xl text-white uppercase ${styles['shadow']} font-patron`}
+      >
         Galaxy <span className="text-blue">Blitz</span>
       </p>
     </div>

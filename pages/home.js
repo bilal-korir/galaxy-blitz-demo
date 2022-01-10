@@ -33,39 +33,39 @@ export default function Home() {
       ScrollReveal = (await import('scrollreveal')).default
 
       ScrollReveal().reveal(navbar.current, {
-        delay: 1000,
+        delay: 1900,
         distance: '100%',
         origin: 'top',
         opacity: 0,
-        duration: 3000,
-        easing: 'ease',
+        // duration: 3000,
+        easing: 'ease-in-out',
       })
 
       // ScrollReveal().reveal(heroMessage.current, {
-      //   delay: 500,
+      //   delay: 1000,
       //   distance: '100%',
       //   origin: 'left',
       //   opacity: 0,
       //   duration: 3000,
-      //   easing: 'ease',
+      //   easing: 'ease-out',
       // })
 
       ScrollReveal().reveal(pageSectionsList.current, {
-        delay: 1000,
+        delay: 2800,
         distance: '100%',
         origin: 'right',
         opacity: 0,
-        duration: 3000,
-        easing: 'ease',
+        // duration: 3000,
+        easing: 'ease-in-out',
       })
 
       ScrollReveal().reveal(footer.current, {
-        delay: 1000,
+        delay: 2800,
         distance: '100%',
         origin: 'bottom',
         opacity: 0,
-        duration: 3000,
-        easing: 'ease',
+        // duration: 3000,
+        easing: 'ease-in-out',
       })
     }
 
@@ -84,6 +84,7 @@ export default function Home() {
       <div className="fixed w-full" ref={navbar}>
         <div className="flex flex-row justify-between px-12">
           <NavBarLogo />
+
           <Menu />
         </div>
       </div>
@@ -112,7 +113,9 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="text-white uppercase">Start the experience</p>
+            <p className="text-white uppercase font-patron">
+              Start the experience
+            </p>
           </div>
         </div>
 

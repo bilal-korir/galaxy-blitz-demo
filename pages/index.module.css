@@ -1,3 +1,8 @@
+@font-face {
+  font-family: PATRON;
+  src: url('/fonts/patron.otf') format('opentype');
+}
+
 .loading-background-image {
   background-image: url('/images/loading-background.jpg');
   background-color: #f0f0f0;
