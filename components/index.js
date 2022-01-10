@@ -1,3 +1,4 @@
-import ProgressBar from './progress-bar'
+import Menu from './menu'
+import NabBarLogo from './nav-bar-logo'
 
-export { ProgressBar }
+export { Menu, NabBarLogo }
