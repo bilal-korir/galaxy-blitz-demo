@@ -13,10 +13,14 @@ import { useRouter } from 'next/router'
 
 import ProgressBar from '@ramonak/react-progress-bar'
 
-import HeroMessage from '../components/hero-message'
-import Menu from '../components/menu'
-import NavBarLogo from '../components/nav-bar-logo'
-import PageSectionsList from '../components/page-sections-list'
+import {
+  HeroMessage,
+  MenuButton,
+  MenuSlider,
+  NavBarLogo,
+  PageSectionsList,
+  SocialMediaIcons,
+} from '../components'
 import log from '../utility/log'
 import styles from './index.module.css'
 
@@ -26,6 +30,7 @@ export default function Home() {
   const heroMessage = useRef(null)
   const pageSectionsList = useRef(null)
   const footer = useRef(null)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   let ScrollReveal
 
@@ -67,32 +72,39 @@ export default function Home() {
     activateScrollRevealAnimation()
   }, [])
 
+  function toggleMenuOpen() {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
     <div
-      className={`w-screen h-screen overflow-x-hidden	 ${styles['home-background-image']}`}
+      className={`w-screen h-screen overflow-hidden	relative ${styles['home-background-image']}`}
     >
       <Head>
         <title>Home - Galaxy Blitz</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="fixed w-full">
+      <div className="z-40 fixed w-full">
         <div className="flex flex-row justify-between items-center pl-0 pr-5 pt-5 lg:pt-10 lg:pl-3 lg:pr-8">
-          <div className="" ref={logo}>
+          <div className="cursor-pointer" ref={logo}>
             <NavBarLogo />
           </div>
-          <div className="" ref={menu}>
-            <Menu />
+          <div className="cursor-pointer" ref={menu}>
+            <MenuButton onClick={toggleMenuOpen} />
           </div>
         </div>
       </div>
 
-      <div className="h-full flex flex-row justify-between item-center px-3 pr-5 lg:pr-8">
-        <div ref={heroMessage} className="w-fit flex item-center">
+      <div className="z-30 h-full flex flex-row justify-between item-center px-3 pr-5 lg:pr-8">
+        <div ref={heroMessage} className="w-fit flex item-center ">
           <HeroMessage />
         </div>
 
-        <div ref={pageSectionsList} className="flex item-center hidden lg:flex">
+        <div
+          ref={pageSectionsList}
+          className="hidden lg:flex h-full flex item-center "
+        >
           <PageSectionsList />
         </div>
       </div>
@@ -105,7 +117,12 @@ export default function Home() {
           <img src={'images/left-dashed-corner.svg'} width={300} />
         </div>
 
-        <div className=" flex flex-col justify-center items-center space-y-2">
+        <div
+          onClick={() => {
+            toggleMenuOpen(false)
+          }}
+          className=" flex flex-col justify-center items-center space-y-2"
+        >
           <div className="py-5 px-2 rounded-full bottom-10 border-2 cursor-pointer">
             <div className="-my-3 py-1.5 px-0.5 rounded-full bg-white animate-bounce"></div>
           </div>
@@ -120,34 +137,12 @@ export default function Home() {
         <div className="relative hidden lg:flex">
           <img src={'images/right-dashed-corner.svg'} width={300} />
           <div className="absolute right-5 bottom-8 flex justify-between w-48">
-            <img
-              src={'icons/discord.svg'}
-              width={20}
-              className="transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer"
-            />
-            <img
-              src={'icons/telegram.svg'}
-              width={20}
-              className="transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer"
-            />
-            <img
-              src={'icons/youtube.svg'}
-              width={20}
-              className="transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer"
-            />
-            <img
-              src={'icons/medium.svg'}
-              width={20}
-              className="transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer"
-            />
-            <img
-              src={'icons/twitter.svg'}
-              width={20}
-              className="transition duration-0 hover:duration-150 hover:scale-125 cursor-pointer"
-            />
+            <SocialMediaIcons />
           </div>
         </div>
       </footer>
+
+      <MenuSlider toggleMenuOpen={toggleMenuOpen} isMenuOpen={isMenuOpen} />
     </div>
   )
 }

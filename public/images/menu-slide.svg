@@ -1,0 +1,14 @@
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="355" height="1061" viewBox="0 0 355 1061">
+  <path id="Neutral_box" data-name="Neutral box" d="M0,5A5,5,0,0,1,5,0H355V1056a5,5,0,0,1-5,5H52L0,1009.652Z" fill="#3ba0d5" opacity="0.24"/>
+</svg> -->
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="356.121" height="1063.121" viewBox="0 0 356.121 1063.121">
+  <g id="Group_3" data-name="Group 3" transform="translate(-9956.879 -3688)">
+    <g id="Group_2" data-name="Group 2">
+      <path id="Neutral_box" data-name="Neutral box" d="M0,5A5,5,0,0,1,5,0H355V1056a5,5,0,0,1-5,5H52L0,1009.652Z" transform="translate(9958 3688)" opacity="0.9"/>
+      <rect id="Rectangle" width="3" height="1011" transform="translate(9957 3688)" fill="#2595cc"/>
+    </g>
+    <path id="Path_14" data-name="Path 14" d="M0,0,50.188,50" transform="translate(9959 4699)" fill="none" stroke="#2595cc" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+  </g>
+</svg>

@@ -15,7 +15,7 @@ export default function HeroMessage({ progress }) {
   }, [])
 
   return (
-    <div className="flex flex-col justify-end lg:justify-center pb-48 lg:pb-0 text-center lg:text-left w-screen lg:w-full">
+    <div className="flex flex-col justify-end lg:justify-center pb-48 md:pb-24 lg:pb-0 text-center lg:text-left w-screen lg:w-full">
       <div className="flex flex-col space-y-3 relative">
         {/* Large screen view */}
         <h

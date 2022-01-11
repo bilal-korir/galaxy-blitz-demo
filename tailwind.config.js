@@ -8,6 +8,7 @@ module.exports = {
       },
       colors: {
         blue: '#2595cc',
+        gold: '#F4BF71',
       },
     },
   },
