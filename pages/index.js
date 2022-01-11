@@ -7,12 +7,10 @@ import {
 } from 'react'
 
 import Head from 'next/head'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import ProgressBar from '@ramonak/react-progress-bar'
 
-import log from '../utility/log'
 import styles from './index.module.css'
 
 export default function Loading() {

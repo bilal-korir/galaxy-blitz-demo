@@ -53,20 +53,27 @@ export default function HeroMessage({ progress }) {
         >
           strategy game
         </h>
-        <p
-          className={`block lg:hidden ${lineThree ? 'visible' : 'invisible'} ${
-            styles[lineThree]
-          } text-md lg:text-2xl text-white tracking-wid font-thin`}
-        >
-          Join in to lead the descendants of humanity
-        </p>
-        <p
-          className={`block lg:hidden ${lineThree ? 'visible' : 'invisible'} ${
-            styles[lineThree]
-          } text-md lg:text-2xl text-white tracking-wid font-thin`}
-        >
-          and forge a new empire!
-        </p>
+
+        <div>
+          <p
+            className={`block lg:hidden ${
+              lineThree ? 'visible' : 'invisible'
+            } ${
+              styles[lineThree]
+            } text-md lg:text-2xl text-white tracking-wid font-thin`}
+          >
+            Join in to lead the descendants of humanity
+          </p>
+          <p
+            className={`block lg:hidden ${
+              lineThree ? 'visible' : 'invisible'
+            } ${
+              styles[lineThree]
+            } text-md lg:text-2xl text-white tracking-wid font-thin`}
+          >
+            and forge a new empire!
+          </p>
+        </div>
       </div>
     </div>
   )

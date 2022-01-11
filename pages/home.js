@@ -8,10 +8,6 @@ import {
 } from 'react'
 
 import Head from 'next/head'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-
-import ProgressBar from '@ramonak/react-progress-bar'
 
 import {
   HeroMessage,
@@ -21,17 +17,14 @@ import {
   PageSectionsList,
   SocialMediaIcons,
 } from '../components'
-import log from '../utility/log'
 import styles from './index.module.css'
 
 export default function Home() {
   const logo = useRef(null)
   const menu = useRef(null)
-  const heroMessage = useRef(null)
   const pageSectionsList = useRef(null)
   const footer = useRef(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
   let ScrollReveal
 
   useEffect(() => {
@@ -78,13 +71,12 @@ export default function Home() {
 
   return (
     <div
-      className={`w-screen h-screen overflow-hidden	relative ${styles['home-background-image']}`}
+      className={`w-screen h-screen overflow-hidden	relative ${styles['home-background-image']} `}
     >
       <Head>
         <title>Home - Galaxy Blitz</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <div className="z-40 fixed w-full">
         <div className="flex flex-row justify-between items-center pl-0 pr-5 pt-5 lg:pt-10 lg:pl-3 lg:pr-8">
           <div className="cursor-pointer" ref={logo}>
@@ -96,8 +88,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="z-30 h-full flex flex-row justify-between item-center px-3 pr-5 lg:pr-8">
-        <div ref={heroMessage} className="w-fit flex item-center ">
+      <div className="z-30 h-full flex flex-row justify-between item-center pl-5 pr-5 lg:pr-8">
+        <div className="w-fit flex item-center ">
           <HeroMessage />
         </div>
 
@@ -105,24 +97,19 @@ export default function Home() {
           ref={pageSectionsList}
           className="hidden lg:flex h-full flex item-center "
         >
-          <PageSectionsList />
+          <PageSectionsList isMenuOpen={isMenuOpen} />
         </div>
       </div>
 
       <footer
         ref={footer}
-        className="absolute bottom-0 w-full flex flex-row justify-center lg:justify-between item-center px-12 h-24"
+        className="absolute bottom-0 w-full flex flex-row justify-center lg:justify-between item-center pl-5 pr-5 lg:pr-8 h-24"
       >
         <div className="hidden lg:flex">
           <img src={'images/left-dashed-corner.svg'} width={300} />
         </div>
 
-        <div
-          onClick={() => {
-            toggleMenuOpen(false)
-          }}
-          className=" flex flex-col justify-center items-center space-y-2"
-        >
+        <div className=" flex flex-col justify-center items-center space-y-2">
           <div className="py-5 px-2 rounded-full bottom-10 border-2 cursor-pointer">
             <div className="-my-3 py-1.5 px-0.5 rounded-full bg-white animate-bounce"></div>
           </div>

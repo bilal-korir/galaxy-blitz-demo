@@ -1,5 +1,3 @@
-import styles from './index.module.css'
-
 export default function NavBarLogo({ progress }) {
   return (
     <div className="flex justify-between w-full">

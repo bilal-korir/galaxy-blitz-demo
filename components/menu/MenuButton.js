@@ -1,6 +1,4 @@
-import styles from './index.module.css'
-
-export default function Menu({ onClick }) {
+export default function MenuButton({ onClick }) {
   return (
     <div
       className="flex items-center"
