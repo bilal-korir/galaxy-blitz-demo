@@ -26,7 +26,7 @@ Option 1: use Git clone command
 
 `$ git clone git@github.com:bilal-korir/galaxy-blitz-demo.git`
 
-Option 1: use HTTP download link
+Option 2: use HTTP download link
 
 `https://github.com/bilal-korir/galaxy-blitz-demo.git`
 
@@ -34,7 +34,7 @@ Option 1: use HTTP download link
 
 `$ cd galaxy-blitz-demo`
 
-`npm insatll`
+`$ npm insatll`
 
 #### Open website in your browser
 
